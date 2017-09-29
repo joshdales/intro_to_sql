@@ -1,0 +1,9 @@
+1.
+Find all the robots from Star Wars.
+
+intro_to_sql=# SELECT * FROM robots WHERE source = 'Star Wars';
+ name |  source   | personality | id
+------+-----------+-------------+----
+ C3PO | Star Wars | anxious     |  4
+ R2D2 | Star Wars | loyal       |  8
+(2 rows)
