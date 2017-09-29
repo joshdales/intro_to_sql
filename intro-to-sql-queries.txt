@@ -7,3 +7,12 @@ intro_to_sql=# SELECT * FROM robots WHERE source = 'Star Wars';
  C3PO | Star Wars | anxious     |  4
  R2D2 | Star Wars | loyal       |  8
 (2 rows)
+
+2.
+Find the robot with an "anxious" personality.
+
+intro_to_sql=# SELECT * FROM robots WHERE personality = 'anxious';
+ name |  source   | personality | id
+------+-----------+-------------+----
+ C3PO | Star Wars | anxious     |  4
+(1 row)
