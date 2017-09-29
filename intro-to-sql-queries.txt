@@ -49,3 +49,19 @@ intro_to_sql=# SELECT name FROM animals WHERE number_of_legs = 8;
 ---------
  octopus
 (1 row)
+
+6.
+Find the board game that takes the least amount of time to play.
+
+intro_to_sql=# SELECT MIN(mins_to_play) FROM board_games;
+ min
+-----
+  15
+(1 row)
+
+intro_to_sql=# SELECT name FROM board_games WHERE mins_to_play = 15;
+   name
+----------
+ Sushi Go
+ Quixo
+(2 rows)
