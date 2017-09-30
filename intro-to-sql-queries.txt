@@ -65,3 +65,18 @@ intro_to_sql=# SELECT name FROM board_games WHERE mins_to_play = 15;
  Sushi Go
  Quixo
 (2 rows)
+
+7.
+Find the recipe that takes the most time to prepare.
+
+intro_to_sql=# SELECT MAX(minutes_required) FROM recipes;
+ max
+-----
+ 390
+(1 row)
+
+intro_to_sql=# SELECT name FROM recipes WHERE minutes_required = 390;
+                   name
+-------------------------------------------
+ Stout Slow Cooker Corned Beef and Veggies
+(1 row)
