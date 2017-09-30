@@ -80,3 +80,14 @@ intro_to_sql=# SELECT name FROM recipes WHERE minutes_required = 390;
 -------------------------------------------
  Stout Slow Cooker Corned Beef and Veggies
 (1 row)
+
+8.
+Find all the robots whose name starts with the letter M.
+
+intro_to_sql=# SELECT name FROM robots WHERE name LIKE 'M%';
+intro_to_sql=# SELECT * FROM robots WHERE name LIKE 'M%';
+      name      |                source                |  personality  | id
+----------------+--------------------------------------+---------------+----
+ Marvin         | The Hitchhiker's Guide to the Galaxy | pessimistic   |  3
+ Mr. Butlertron | Clone High                           | compassionate |  5
+(2 rows)
