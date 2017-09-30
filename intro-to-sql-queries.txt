@@ -111,10 +111,26 @@ intro_to_sql=# SELECT * FROM animals WHERE swimming = true AND egg_laying = true
  duck    |              2 | t      | t        | t          |  4
 (2 rows)
 
+11.
 Find all animals that are swimming and egg-laying but not flying.
 
 intro_to_sql=# SELECT * FROM animals WHERE swimming = true AND egg_laying = true AND flying = false;
   name   | number_of_legs | flying | swimming | egg_laying | id
 ---------+----------------+--------+----------+------------+----
  octopus |              8 | f      | t        | t          |  3
+(1 row)
+
+12.
+Find the board game that supports the largest number of people.
+
+intro_to_sql=# SELECT MAX(max_players) FROM board_games;
+ max
+-----
+  30
+(1 row)
+
+intro_to_sql=# SELECT * FROM board_games WHERE max_players = 30;
+          name          | max_players | min_players | category | mins_to_play | id
+------------------------+-------------+-------------+----------+--------------+----
+ Cards Against Humanity |          30 |           5 | party    |           30 |  8
 (1 row)
