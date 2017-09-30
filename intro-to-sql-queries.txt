@@ -91,3 +91,12 @@ intro_to_sql=# SELECT * FROM robots WHERE name LIKE 'M%';
  Marvin         | The Hitchhiker's Guide to the Galaxy | pessimistic   |  3
  Mr. Butlertron | Clone High                           | compassionate |  5
 (2 rows)
+
+9.
+Count the number of board games that can be played by 8 people.
+
+intro_to_sql=# SELECT * FROM board_games WHERE max_players = 8;
+     name      | max_players | min_players | category | mins_to_play | id
+---------------+-------------+-------------+----------+--------------+----
+ Arkham Horror |           8 |           1 | strategy |          240 |  1
+(1 row)
