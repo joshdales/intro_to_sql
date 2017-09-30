@@ -110,3 +110,11 @@ intro_to_sql=# SELECT * FROM animals WHERE swimming = true AND egg_laying = true
  octopus |              8 | f      | t        | t          |  3
  duck    |              2 | t      | t        | t          |  4
 (2 rows)
+
+Find all animals that are swimming and egg-laying but not flying.
+
+intro_to_sql=# SELECT * FROM animals WHERE swimming = true AND egg_laying = true AND flying = false;
+  name   | number_of_legs | flying | swimming | egg_laying | id
+---------+----------------+--------+----------+------------+----
+ octopus |              8 | f      | t        | t          |  3
+(1 row)
