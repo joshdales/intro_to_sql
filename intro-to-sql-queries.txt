@@ -95,11 +95,13 @@ intro_to_sql=# SELECT * FROM robots WHERE name LIKE 'M%';
 9.
 Count the number of board games that can be played by 8 people.
 
-intro_to_sql=# SELECT * FROM board_games WHERE max_players = 8;
-     name      | max_players | min_players | category | mins_to_play | id
----------------+-------------+-------------+----------+--------------+----
- Arkham Horror |           8 |           1 | strategy |          240 |  1
-(1 row)
+intro_to_sql=# SELECT * FROM board_games WHERE max_players>7;
+          name          | max_players | min_players | category | mins_to_play | id 
+------------------------+-------------+-------------+----------+--------------+----
+ Arkham Horror          |           8 |           1 | strategy |          240 |  1
+ Cards Against Humanity |          30 |           5 | party    |           30 |  8
+ Game of Things         |          15 |           2 | party    |           45 |  9
+(3 rows)
 
 10.
 Find all animals that are swimming and egg-laying.
